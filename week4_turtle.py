@@ -1,0 +1,32 @@
+import turtle
+t = turtle.Turtle()
+t.shape("turtle")
+
+s = turtle.textinput("","도형을 입력하시오: ")
+
+if s== "사각형":
+  col = turtle.textinput("","색상을 선택하세요:")
+  w = int(turtle.textinput("","가로:"))
+  h = int(turtle.textinput("","세로:"))
+  t.fillcolor(col)
+  t.begin_fill()
+  t.forward(w)
+  t.left(90)
+  t.forward(h)
+  t.left(90)
+  t.forward(w)
+  t.left(90)
+  t.forward(h)
+  t.end_fill()
+elif s == "삼각형":
+  col = turtle.textinput("","색상을 선택하세요:")
+  w = int(turtle.textinput("","변의 길이:"))
+  t.fillcolor(col)
+  t.begin_fill()
+  t.forward(w)
+  t.left(120)
+  t.forward(w)
+  t.left(120)
+  t.forward(w)
+  t.end_fill()
+turtle.done()
