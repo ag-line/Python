@@ -28,3 +28,4 @@ print(TwoArr) # 1 3개로 채운 2차원 5행3열
 
 zeroArr = np.zeros(5)
 print(zeroArr) #0으로 5(size)개
+

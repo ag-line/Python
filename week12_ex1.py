@@ -7,15 +7,15 @@ def chkRexp(ptn,str):
         if found:
             if found.group() != "":
               print(found.group(),end=" ")
-              #print(w)
-chkRexp("(ab)*",str) #ab abab ababab ab
+
+chkRexp("[ab]+",str) #ab abab ababab ab
 print("")
-chkRexp("A{1,3}",str) #A AA AAA
+chkRexp("A*",str) #A AA AAA
 print("")
-chkRexp("^[1-9]{1,4}",str) #123 156 11 3456
+chkRexp("[0-9]*",str) #123 156 11 3456
 print("")
 chkRexp("^[1-9]{4}",str) #3456
 print("")
-chkRexp("[A-Z]",str)#O M R A A A
+chkRexp("^[A-Z]",str)#O M R A A A
 print("")
-chkRexp("[a-z]$",str) #h y e s d d e b b b c
+chkRexp("[a-z]$",str) #h y e s d d e b b b c 

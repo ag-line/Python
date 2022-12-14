@@ -6,6 +6,7 @@ def inputData(n):
     temp.append(input("이름: "))
     temp.append(int(input("점수: ")))
     myList.append(temp)
+  print("==inputData==")
   print(myList)  
   return myList
 
@@ -14,6 +15,7 @@ def saveFile(myList):
   with open("score.txt","w",encoding='utf-8') as f:
     for i in range(len(myList)):
       mStr = ' '.join(map(str,myList[i]))
+      print("===saveFile===")
       print(mStr)
       if i == (len(myList)-1):
         f.write(mStr)
@@ -26,6 +28,7 @@ def readFile(fileName):
   keys = []
   values = [] 
   myDic = {}
+  print("===readFile===")
   for line in row:
     line = line.split()
     keys.append(int(line[0]))
@@ -37,6 +40,7 @@ def readFile(fileName):
   return myDic
 
 def searchData(keys, myDic):
+  print("==searchData==")
   print(keys,myDic[keys])
 
 myList = inputData(3)
